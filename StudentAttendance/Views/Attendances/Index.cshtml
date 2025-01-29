@@ -1,0 +1,54 @@
+﻿@model IEnumerable<StudentAttendance.Models.Attendance>
+
+
+@{
+    ViewData["Title"] = "Attendance Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttendanceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClassID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttendanceDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AttendanceID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AttendanceID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AttendanceID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

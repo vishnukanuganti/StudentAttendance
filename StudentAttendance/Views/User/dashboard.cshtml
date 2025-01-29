@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Dashboard</h2>
+
+<div class="container mt-5">
+    <div class="jumbotron bg-info text-white">
+        <h1 class="display-4">Welcome to the Dashboard!</h1>
+        <p class="lead">This is a simple dashboard page.</p>
+        <hr class="my-4">
+        <p>Use the navigation bar to access different sections.</p>
+        <a class="btn btn-danger btn-lg" asp-action="Logout" role="button">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+    </div>
+</div>
+
+<!-- Add these lines in your layout or head section to include Bootstrap and Font Awesome -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
